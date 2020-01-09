@@ -13,7 +13,7 @@ git config --global user.email "soulkanarprograms@gmail.com"
 
 # ** Download dotfile repository
 git clone --bare https://github.com/soulkanarprograms/.cfg.git ~/.cfg
-sed 's/github/soulkanarprograms:str0g0n0ff@github/g' ~/.cfg/config
+sed -i 's/github/soulkanarprograms:str0g0n0ff@github/g' ~/.cfg/config
 
 function config {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
