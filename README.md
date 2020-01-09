@@ -13,3 +13,10 @@ sudo chmod +x bootstrap_dotfiles
 
 4) Execute the file to clone this repository
 ./bootstrap_dotfiles
+
+
+## Commands
+
+config add <file_name>
+config commit -m '<your commend>'
+config push origin master
