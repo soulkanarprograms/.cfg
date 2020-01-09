@@ -17,6 +17,6 @@ sudo chmod +x bootstrap_dotfiles
 
 ## Commands
 
-config add <file_name>
-config commit -m '<your commend>'
-config push origin master
+- config add <file_name>
+- config commit -m '<your commend>'
+- config push origin master
