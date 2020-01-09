@@ -9,7 +9,7 @@ vi bootstrap_dot_file
 2) Copy the files content
 
 3) Make the file executable
-sudo chmod +x bootstrap_dot_file
+sudo chmod +x bootstrap_dotfiles
 
 4) Execute the file to clone this repository
-./bootstrap_dot_file
+./bootstrap_dotfiles
