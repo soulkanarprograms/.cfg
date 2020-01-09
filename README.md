@@ -4,7 +4,7 @@
 To start your dot files installation you need to:
 
 1) Create bootstrap file.
-vi bootstrap_dot_file
+vi bootstrap_dotfiles
 
 2) Copy the files content
 
