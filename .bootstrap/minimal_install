@@ -15,8 +15,6 @@ sudo apt install -y zsh
 sudo apt-get install -y vifm
 
 # ** Install Oh-My-Zsh
-	sudo apt-get install -y powerline fonts-powerline
-
 	cp ~/.zshrc ~/.zshrc.orig
 
 	export ZSH=~/.config/.oh-my-zsh
