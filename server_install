@@ -4,19 +4,30 @@
 cd $PWD && ./minimal_install
 
 # ** Install Oh-My-Zsh
-sudo apt-get install -y powerline fonts-powerline
+	sudo apt-get install -y powerline fonts-powerline
 
-git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.config/.oh-my-zsh
+	git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.config/.oh-my-zsh
 
-cp ~/.config/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+	cp ~/.config/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
-chsh -s /bin/zsh
+	chsh -s /bin/zsh
 
-cd ~/.config/.oh-my-zsh
+	cd ~/.config/.oh-my-zsh
 
-# ** Sintax Highlight
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.config/.zsh-syntax-highlighting" --depth 1
-echo "source $HOME/.config/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.config/.zshrc"
-sed -i 's/robbyrussell/agnoster/g' ~/.zshrc
-sed -i 's/export ZSH=$HOME/.oh-my-zsh/export ZSH=$HOME/.config/.oh-my-zsh/g' ~/.zshrc
+	# ** Sintax Highlight
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.config/.zsh-syntax-highlighting" --depth 1
+	echo "source $HOME/.config/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.config/.zshrc"
+	sed -i 's/robbyrussell/agnoster/g' ~/.zshrc
+	sed -i 's/export ZSH=$HOME/.oh-my-zsh/export ZSH=$HOME/.config/.oh-my-zsh/g' ~/.zshrc
 
+# ** TMUX
+sudo apt install -y tmux
+
+# ** LaTeX
+sudo apt install -y texlive-latex-extra
+
+# ** Task Warrior for Taking Notes
+sudo apt install -y taskwarrior
+
+# ** Googler
+sudo apt install -y googler
