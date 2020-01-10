@@ -6,6 +6,9 @@ cd $PWD && ./.minimal_install
 # ** Install Powerline
 sudo apt-get install -y powerline fonts-powerline
 
+echo "# powerline configuration in .zshrc
+. /usr/share/powerline/bindings/zsh/powerline.zsh" >> ~/.zshrc
+
 # ** TMUX
 sudo apt install -y tmux
 
