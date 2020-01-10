@@ -1,8 +1,0 @@
-#! /bin/bash
-
-# Call Minimal installation script to install all
-cd $PWD && ./server_install
-
-# ** Install GUI Softwares
-
-
