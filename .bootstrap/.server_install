@@ -1,0 +1,22 @@
+#! /bin/bash
+
+# Call Minimal installation script to install all
+cd $PWD && ./.minimal_install
+
+# ** Install Powerline
+sudo apt-get install -y powerline fonts-powerline
+
+echo "# powerline configuration in .zshrc
+. /usr/share/powerline/bindings/zsh/powerline.zsh" >> ~/.zshrc
+
+# ** TMUX
+sudo apt install -y tmux
+
+# ** LaTeX
+sudo apt install -y texlive-latex-extra
+
+# ** Task Warrior for Taking Notes
+sudo apt install -y taskwarrior
+
+# ** Googler
+sudo apt install -y googler
