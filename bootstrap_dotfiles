@@ -32,3 +32,4 @@ config config status.showUntrackedFiles no
 # ** Change permission of all installation files
 sudo chmod +x $PWD/.minimal_install
 sudo chmod +x $PWD/.server_install
+sudo chmod +x $PWD/.gui_install
