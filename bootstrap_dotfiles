@@ -7,9 +7,11 @@
 sudo apt install -y git unzip
 
 # ** Setting Up Git (it may not be needed)
-
 git config --global user.name "Guilherme"
 git config --global user.email "soulkanarprograms@gmail.com"
+
+# ** Creating alias for configuration
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # ** Download dotfile repository
 git clone --bare https://github.com/soulkanarprograms/.cfg.git ~/.cfg
