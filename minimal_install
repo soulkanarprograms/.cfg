@@ -1,0 +1,16 @@
+#! /bin/bash
+
+# Create base directory
+mkdir ~/.config
+
+# ** Install VIM 8
+sudo add-apt-repository ppa:jonathonf/vim -y
+sudo apt update -y
+sudo apt install vim -y
+
+# ** Install zsh
+sudo apt install -y zsh
+
+# ** Install vifm
+sudo apt-get install -y vifm
+
