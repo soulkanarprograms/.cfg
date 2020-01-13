@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.config/.oh-my-zsh
+export ZSH=$HOME/.config/oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -71,6 +71,9 @@ ZSH_THEME="agnoster"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source /home/guilherme/.config/oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/guilherme/.config/oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/guilherme/.config/system/.alias
 
 # User configuration
 
@@ -86,6 +89,12 @@ else
   export EDITOR='mvim'
 fi
 
+export TERM='xterm-256color'
+
+# Change .vimrc default location
+export VIMINIT='source $MYVIMRC'
+export MYVIMRC='~/.config/vim/.vimrc'  
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -97,15 +106,8 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export TERM='xterm-256color'
-
-source /home/guilherme/.config/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /home/guilherme/.config/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /home/guilherme/.config/system/.alias
 
 # powerline configuration in .zshrc
 . /usr/share/powerline/bindings/zsh/powerline.zsh
 
-# Change .vimrc default location
-export VIMINIT='source $MYVIMRC'
-export MYVIMRC='~/.config/vim/.vimrc'  
+
