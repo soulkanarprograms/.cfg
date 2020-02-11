@@ -32,8 +32,8 @@ config checkout
 config config status.showUntrackedFiles no
 
 # ** Change permission of all installation files
-sudo chmod +x $PWD/.bootstrap/.minimal_install
-sudo chmod +x $PWD/.bootstrap/.server_install
-sudo chmod +x $PWD/.bootstrap/.gui_install
+sudo chmod +x $PWD/.bootstrap/minimal_install
+sudo chmod +x $PWD/.bootstrap/server_install
+sudo chmod +x $PWD/.bootstrap/gui_install
 
 source $PWD/.bootstrap/.alias
