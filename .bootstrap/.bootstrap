@@ -38,7 +38,8 @@ installation_method=$2
 
 if [ "$installation_method" = "minimal" ]; then
         if [ "$operational_system" = "Ubuntu" ]; then
-                git checkout $operational_system
+                git symbolic-ref HEAD refs/heads/$operational_system
+                #git checkout $operational_system
                 sudo chmod +x $HOME/.bootstrap/minimal_install
                 exec $HOME/.bootstrap/minimal_install $operational_system
         fi
