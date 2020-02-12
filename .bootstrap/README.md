@@ -12,7 +12,8 @@ vi bootstrap
 sudo chmod +x bootstrap
 
 4) Execute the file to clone this repository
-./bootstrap
+sudo ~/bootstrap <Operational System> <Installation methos>
+sudo ~/bootstrap Ubuntu Minimal
 
 
 ## Commands
