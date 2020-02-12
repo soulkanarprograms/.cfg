@@ -31,54 +31,45 @@ fi;
 config checkout
 config config status.showUntrackedFiles no
 
-# ** Change permission of all installation files
-#sudo chmod +x $HOME/.bootstrap/minimal_install
-#sudo chmod +x $HOME/.bootstrap/server_install
-#sudo chmod +x $HOME/.bootstrap/gui_install
-
 source $HOME/.bootstrap/.alias
 
 operational_system=$1
 installation_method=$2
 
 if [ "$installation_method" = "minimal" ]; then
-        echo "cd ~/.cfg"
         if [ "$operational_system" = "Ubuntu" ]; then
-                echo "git checkout $operational_system"
+                git checkout $operational_system
                 sudo chmod +x $HOME/.bootstrap/minimal_install
-                echo "./minimal_install $operational_system"    
+                exec $HOME/.bootstrap/minimal_install $operational_system
         fi
         if [ "$operational_system" = "Archlinux" ]; then
-                echo "git checkout $operational_system"
+                git checkout $operational_system
                 sudo chmod +x $HOME/.bootstrap/minimal_install
-                echo "./minimal_install $operational_system"    
+                exec $HOME/.bootstrap/minimal_install $operational_system
         fi
 fi
 if [ "$installation_method" = "server" ]; then
-        echo "cd ~/.cfg"
         if [ "$operational_system" = "Ubuntu" ]; then
-                echo "git checkout $operational_system"
+                git checkout $operational_system
                 sudo chmod +x $HOME/.bootstrap/server_install
-                echo "./server_install $operational_system"     
+                .exec $HOME/.bootstrap/server_install $operational_system
         fi
         if [ "$operational_system" = "Archlinux" ]; then
-                echo "git checkout $operational_system"
+                git checkout $operational_system
                 sudo chmod +x $HOME/.bootstrap/server_install
-                echo "./server_install $operational_system"     
+                exec $HOME/.bootstrap/server_install $operational_system
         fi
 
 fi
 if [ "$installation_method" = "gui" ]; then
-        echo "cd ~/.cfg"
         if [ "$operational_system" = "Ubuntu" ]; then
-                echo "git checkout $operational_system"
+                git checkout $operational_system
                 sudo chmod +x $HOME/.bootstrap/gui_install
-                echo "./gui_install $operational_system"        
+                exec $HOME/.bootstrap/gui_install $operational_system
         fi
         if [ "$operational_system" = "Archlinux" ]; then
-                echo "git checkout $operational_system"
+                git checkout $operational_system
                 sudo chmod +x $HOME/.bootstrap/gui_install
-                echo "./gui_install $operational_system"        
+                exec $HOME/.bootstrap/gui_install $operational_system
         fi
 fi
-
